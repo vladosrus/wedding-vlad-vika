@@ -1,9 +1,11 @@
 import { Box, Flex, HStack, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react';
+
 import NextImage from 'components/NextImage';
+import SectionWrapper from 'components/SectionWrapper';
+import CustomOverlayLink from 'components/CustomOverlayLink';
 
 import PurpleStar from 'assets/icons/purpleStar.svg';
 import Illustration from '../../../app/opengraph-image.jpg';
-import CustomOverlayLink from 'components/CustomOverlayLink';
 
 const navButtonsData = [
   { text: 'План мероприятия', link: '#' },
@@ -12,7 +14,7 @@ const navButtonsData = [
 ];
 
 const Greetings = () => (
-  <Flex as="section" w="full" justify="center" p={{ mobile: '0 16px 14px', laptop: '0 32px 28px' }}>
+  <SectionWrapper>
     <VStack w="full" maxW="1200px" gap={{ mobile: '12px', laptop: '18px' }}>
       <Text fontSize="16px" letterSpacing="3.2px" textTransform="uppercase" textAlign="center">
         Свадебная церемония
@@ -61,7 +63,7 @@ const Greetings = () => (
         </HStack>
       </Box>
     </VStack>
-  </Flex>
+  </SectionWrapper>
 );
 
 export default Greetings;
