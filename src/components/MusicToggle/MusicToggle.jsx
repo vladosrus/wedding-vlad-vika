@@ -18,10 +18,12 @@ const MusicToggle = () => {
   return (
     <Box
       position="fixed"
-      inset={{ mobile: '-5px -5px auto auto', laptop: '10px 10px auto auto' }}
+      inset={{ mobile: '0px 0px auto auto', laptop: '10px 10px auto auto' }}
       zIndex="docked"
+      cursor="pointer"
+      onClick={toggle}
     >
-      <Box position="relative" boxSize={{ mobile: '60px', tablet: '80px', laptop: '120px' }}>
+      <Box position="relative" boxSize={{ mobile: '70px', tablet: '80px', laptop: '120px' }}>
         <Circle
           size={{ mobile: '30px', tablet: '40px', laptop: '60px' }}
           bg="ourAccent"
@@ -30,9 +32,7 @@ const MusicToggle = () => {
           left="50%"
           transform="translate(-50%, -50%)"
           color="white"
-          cursor="pointer"
           animation={!isPlaying && `${pulse} 2.5s linear infinite`}
-          onClick={toggle}
           zIndex="2"
         >
           <MusicIcon isMuted={!isPlaying} />

@@ -26,17 +26,16 @@ const Countdown = () => {
   return (
     <SectionWrapper>
       <VStack
-        w="full"
         maxW={{ mobile: '500px', laptop: '900px' }}
         gap={{ mobile: '20px', laptop: '32px' }}
         bg="rgba(20, 12, 64, 0.04)"
         borderRadius="28px"
-        p={{ mobile: '28px 18px 18px', laptop: '42px 48px 48px' }}
+        p={{ mobile: '28px 18px 18px', laptop: '42px' }}
       >
         <Text
           as="h2"
-          fontSize={{ mobile: '19px', laptop: '32px' }}
-          letterSpacing="6px"
+          fontSize={{ mobile: '13px', tablet: '19px', laptop: '30px' }}
+          letterSpacing="2px"
           textTransform="uppercase"
           textAlign="center"
         >
@@ -45,20 +44,16 @@ const Countdown = () => {
 
         <SimpleGrid
           w="full"
-          columns={{ mobile: 2, xms: 4 }}
-          gap={{ mobile: '18px', laptop: '32px' }}
+          columns={{ mobile: 2, smallMobile: 4 }}
+          gap={{ mobile: '10px', laptop: '32px' }}
         >
           {countdownItems.map(({ labels, value }) => (
-            <VStack key={labels[0]} gap="8px" textAlign="center">
-              <Text fontSize={{ mobile: '32px', tablet: '40px', laptop: '72px' }}>
+            <VStack key={labels[0]} gap="0" textAlign="center">
+              <Text fontSize={{ mobile: '32px', tablet: '40px', laptop: '60px' }}>
                 {String(value).padStart(2, '0')}
               </Text>
 
-              <Text
-                fontSize={{ mobile: '10px', tablet: '14px', laptop: '18px' }}
-                letterSpacing="4px"
-                textTransform="uppercase"
-              >
+              <Text fontSize={{ mobile: '10px', laptop: '15px' }} textTransform="uppercase">
                 {pluralize(value, labels)}
               </Text>
             </VStack>
@@ -67,7 +62,7 @@ const Countdown = () => {
 
         <Flex
           w="full"
-          maxW={{ laptop: '700px' }}
+          maxW={{ smallMobile: '260px', tablet: '360px', laptop: '520px' }}
           borderRadius={{ mobile: '18px', laptop: '28px' }}
           overflow="hidden"
         >

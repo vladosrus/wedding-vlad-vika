@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 const breakpoints = {
   mobile: '0px',
-  xms: '400px',
+  smallMobile: '320px',
   tablet: '656px',
   laptop: '992px',
   desktop: '1441px',
