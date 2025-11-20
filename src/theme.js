@@ -4,6 +4,7 @@ const breakpoints = {
   mobile: '0px',
   smallMobile: '320px',
   tablet: '656px',
+  md: '742px',
   laptop: '992px',
   desktop: '1441px',
 };

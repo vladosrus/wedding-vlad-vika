@@ -27,13 +27,13 @@ const Greetings = () => (
       <HStack fontSize="16px" gap="8px">
         <Text textAlign="end">Санкт-Петербург</Text>
 
-        <NextImage src={PurpleStar} alt="Розовая звёздочка" w="28px" h="28px" quality="75" />
+        <NextImage src={PurpleStar} alt="Розовая звёздочка" w="28px" h="28px" />
 
         <Text>22/07/2026 и 25/07/2026</Text>
       </HStack>
 
       <Flex w="full" my="14px" borderRadius={{ mobile: '18px', laptop: '28px' }} overflow="hidden">
-        <NextImage src={Illustration} alt="Иллюстрация" w="full" h="full" quality="75" />
+        <NextImage src={Illustration} alt="Иллюстрация" w="full" h="full" />
       </Flex>
 
       <Box as="nav">

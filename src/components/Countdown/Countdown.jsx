@@ -66,7 +66,7 @@ const Countdown = () => {
           borderRadius={{ mobile: '18px', laptop: '28px' }}
           overflow="hidden"
         >
-          <NextImage src={Illustration} alt="Иллюстрация" w="full" h="full" quality="75" />
+          <NextImage src={Illustration} alt="Иллюстрация" w="full" h="full" />
         </Flex>
       </VStack>
     </SectionWrapper>
