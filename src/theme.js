@@ -13,7 +13,8 @@ const colors = {
   ourGray: '#140c4014',
   ourAccent: '#DB7093',
 };
+const styles = { global: { html: { scrollBehavior: 'smooth' } } };
 
-const theme = extendTheme({ breakpoints, colors });
+const theme = extendTheme({ breakpoints, colors, styles });
 
 export default theme;

@@ -24,7 +24,7 @@ const looks = [
 ];
 
 const LooksSlider = () => (
-  <SectionWrapper>
+  <SectionWrapper id="looks">
     <VStack w="full" maxW="1000px" gap={{ mobile: '18px', laptop: '26px' }}>
       <Text
         as="h2"
@@ -46,7 +46,6 @@ const LooksSlider = () => (
 
       <Box
         w="full"
-        // px={{ mobile: '12px', tablet: '20px', laptop: '18px' }}
         sx={{
           '--swiper-pagination-color': '#DB7093',
           '--swiper-pagination-bullet-inactive-color': 'rgba(20, 12, 64, 0.26)',

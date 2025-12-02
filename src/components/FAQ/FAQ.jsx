@@ -20,7 +20,7 @@ const faqs = [
 ];
 
 const FAQ = () => (
-  <SectionWrapper>
+  <SectionWrapper id="faq">
     <VStack w="full" maxW="800px" gap={{ mobile: '18px', laptop: '24px' }}>
       <Text as="h2" fontSize={{ mobile: '26px', laptop: '36px' }} textAlign="center">
         Вопрос-ответ

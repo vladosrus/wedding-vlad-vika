@@ -8,9 +8,9 @@ import PurpleStar from 'assets/icons/purpleStar.svg';
 import Illustration from '../../../app/opengraph-image.jpg';
 
 const navButtonsData = [
-  { text: 'План мероприятия', link: '#' },
-  { text: 'Вопрос-ответ', link: '#' },
-  { text: 'Подарки', link: '#' },
+  { text: 'План мероприятия', link: '#event-plan' },
+  { text: 'Палитра праздника', link: '#looks' },
+  { text: 'Вопрос-ответ', link: '#faq' },
 ];
 
 const Greetings = () => (

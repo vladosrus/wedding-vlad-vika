@@ -75,7 +75,7 @@ const schedule = [
 ];
 
 const EventPlan = () => (
-  <SectionWrapper>
+  <SectionWrapper id="event-plan">
     <VStack w="full" maxW="1000px" gap={{ mobile: '22px', laptop: '28px' }}>
       <Text as="h2" fontSize={{ mobile: '26px', laptop: '36px' }} textAlign="center">
         План мероприятий
