@@ -77,8 +77,6 @@ const schedule = [
 const EventPlan = () => (
   <SectionWrapper>
     <VStack w="full" maxW="1000px" gap={{ mobile: '22px', laptop: '28px' }}>
-      <CustomDivider />
-
       <Text
         as="h2"
         fontSize={{ mobile: '26px', laptop: '36px' }}
@@ -102,7 +100,6 @@ const EventPlan = () => (
               key={date}
               borderRadius="12px"
               fontWeight="600"
-              color="ourBlack"
               p={{ mobile: '10px', laptop: '14px 18px' }}
               _selected={{
                 bg: 'white',

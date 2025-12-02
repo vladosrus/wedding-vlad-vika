@@ -27,7 +27,6 @@ const EventItem = ({ index, date, time, timeNote = null, title, description, ima
           fontSize={{ mobile: '12px', laptop: '14px' }}
           textTransform="uppercase"
           letterSpacing="1.2px"
-          color="rgba(20, 12, 64, 0.7)"
         >
           {date}
         </Text>
@@ -36,11 +35,7 @@ const EventItem = ({ index, date, time, timeNote = null, title, description, ima
           {time}
         </Text>
 
-        {timeNote && (
-          <Text fontSize={{ mobile: '12px', laptop: '13px' }} color="rgba(20, 12, 64, 0.7)">
-            {timeNote}
-          </Text>
-        )}
+        {timeNote && <Text fontSize={{ mobile: '12px', laptop: '13px' }}>{timeNote}</Text>}
       </VStack>
 
       <Flex
@@ -54,16 +49,12 @@ const EventItem = ({ index, date, time, timeNote = null, title, description, ima
         <NextImage src={image} alt={title} w="full" h="full" />
       </Flex>
 
-      <VStack align="flex-start" spacing="8px" flex="1">
+      <VStack align="flex-start" gap="8px" flex="1">
         <Text as="h3" fontSize={{ mobile: '18px', laptop: '22px' }}>
           {title}
         </Text>
 
-        <Text
-          fontSize={{ mobile: '14px', laptop: '16px' }}
-          lineHeight="150%"
-          color="rgba(20, 12, 64, 0.82)"
-        >
+        <Text fontSize={{ mobile: '14px', laptop: '16px' }} lineHeight="150%">
           {description}
         </Text>
       </VStack>
