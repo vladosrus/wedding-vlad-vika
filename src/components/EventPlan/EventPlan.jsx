@@ -1,6 +1,7 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from '@chakra-ui/react';
 
 import SectionWrapper from 'components/SectionWrapper';
+import EventItem from './EventItem';
 
 import Zags from 'assets/illustrations/eventPlan/zags.jpg';
 import Neva from 'assets/illustrations/eventPlan/neva.jpg';
@@ -9,8 +10,6 @@ import ZagorodnayaPloshchadka from 'assets/illustrations/eventPlan/zagorodnaya_p
 import Ceremoniya from 'assets/illustrations/eventPlan/ceremoniya.jpeg';
 import Banket from 'assets/illustrations/eventPlan/banket.jpg';
 import Party from 'assets/illustrations/eventPlan/party.jpg';
-import CustomDivider from 'components/CustomDivider';
-import EventItem from './EventItem';
 
 const schedule = [
   {
@@ -18,7 +17,8 @@ const schedule = [
     events: [
       {
         time: '17:30',
-        title: 'ЗАГС',
+        title:
+          'ЗАГС (<a href="https://yandex.ru/navi/org/dvorets_brakosochetaniya_1/1311913400?si=jcxh3fr463x5p7u5ekttb5g5tm" target="_blank" title="Посмотрите где это на Яндекс.Картах" style="color: #DB7093;">Английская набережная, 28</a>)',
         image: Zags,
         description:
           'Торжественная регистрация начнётся в 18:00 — будем рады, если вы приедете немного заранее, чтобы спокойно собраться и настроиться на эту важную для нас церемонию.',
@@ -77,11 +77,7 @@ const schedule = [
 const EventPlan = () => (
   <SectionWrapper>
     <VStack w="full" maxW="1000px" gap={{ mobile: '22px', laptop: '28px' }}>
-      <Text
-        as="h2"
-        fontSize={{ mobile: '26px', laptop: '36px' }}
-        textAlign={{ mobile: 'center', laptop: 'left' }}
-      >
+      <Text as="h2" fontSize={{ mobile: '26px', laptop: '36px' }} textAlign="center">
         План мероприятий
       </Text>
 
@@ -93,7 +89,8 @@ const EventPlan = () => (
           bg="rgba(20, 12, 64, 0.04)"
           p="6px"
           borderRadius="18px"
-          border="1px solid rgba(20, 12, 64, 0.08)"
+          border="1px solid"
+          borderColor="ourGray"
         >
           {schedule.map(({ date }) => (
             <Tab

@@ -1,5 +1,6 @@
 import { VStack } from '@chakra-ui/react';
 
+import FAQ from 'components/FAQ';
 import Countdown from 'components/Countdown';
 import EventPlan from 'components/EventPlan';
 import Greetings from 'components/Greetings';
@@ -18,6 +19,8 @@ export default function Home() {
       <EventPlan />
       <BlocksDivider />
       <LooksSlider />
+      <BlocksDivider />
+      <FAQ />
 
       <MusicToggle />
     </VStack>

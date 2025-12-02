@@ -11,10 +11,11 @@ const BlocksDivider = ({ ...props }) => (
     pb={{ mobile: '10px', laptop: '20px' }}
     mx="auto"
     gap="8px"
+    {...props}
   >
-    <Box w="140px" h="1px" bg="ourBlack" {...props} />
+    <Box w="140px" h="1px" bg="ourBlack" />
     <NextImage src={PurpleStar} alt="Розовая звёздочка" w="35px" h="35px" />
-    <Box w="140px" h="1px" bg="ourBlack" {...props} />
+    <Box w="140px" h="1px" bg="ourBlack" />
   </HStack>
 );
 

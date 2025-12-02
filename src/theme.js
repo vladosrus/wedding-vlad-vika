@@ -10,6 +10,7 @@ const breakpoints = {
 };
 const colors = {
   ourBlack: '#140c40',
+  ourGray: '#140c4014',
   ourAccent: '#DB7093',
 };
 

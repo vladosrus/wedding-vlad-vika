@@ -50,9 +50,11 @@ const EventItem = ({ index, date, time, timeNote = null, title, description, ima
       </Flex>
 
       <VStack align="flex-start" gap="8px" flex="1">
-        <Text as="h3" fontSize={{ mobile: '18px', laptop: '22px' }}>
-          {title}
-        </Text>
+        <Text
+          as="h3"
+          fontSize={{ mobile: '18px', laptop: '22px' }}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
 
         <Text fontSize={{ mobile: '14px', laptop: '16px' }} lineHeight="150%">
           {description}
