@@ -11,6 +11,7 @@ const navButtonsData = [
   { text: 'План мероприятия', link: '#event-plan' },
   { text: 'Палитра праздника', link: '#looks' },
   { text: 'Вопрос-ответ', link: '#faq' },
+  { text: 'Анкета гостя', link: '#guest-form' },
 ];
 
 const Greetings = () => (

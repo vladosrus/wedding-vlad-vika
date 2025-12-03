@@ -39,7 +39,7 @@ const useAudioPlayer = audioSrc => {
       audio.removeEventListener('error', handleError);
       audioRef.current = null;
     };
-  }, []);
+  }, [audioSrc]);
 
   const toggleMusic = async () => {
     if (hasError) return;
@@ -58,12 +58,7 @@ const useAudioPlayer = audioSrc => {
     }
   };
 
-  return {
-    isReady,
-    isPlaying,
-    hasError,
-    toggle: toggleMusic,
-  };
+  return { isReady, isPlaying, hasError, toggle: toggleMusic };
 };
 
 export default useAudioPlayer;
