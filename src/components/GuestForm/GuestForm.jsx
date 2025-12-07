@@ -4,8 +4,6 @@ import {
   Text,
   Input,
   Radio,
-  Button,
-  HStack,
   VStack,
   Checkbox,
   useToast,
@@ -18,6 +16,8 @@ import {
 import { useState } from 'react';
 
 import SectionWrapper from 'components/SectionWrapper';
+import CustomButton from 'components/CustomButton';
+
 import { validate } from './utils';
 import {
   attendanceOptions,
@@ -196,20 +196,7 @@ const GuestForm = () => {
             <FormErrorMessage>{errors.drinks}</FormErrorMessage>
           </FormControl>
 
-          <HStack justify="center">
-            <Button
-              type="submit"
-              isDisabled={isSubmitDisabled}
-              bg="ourAccent"
-              color="white"
-              borderRadius="10px"
-              px="36px"
-              _hover={{ bg: '#c75f82' }}
-              _disabled={{ bg: 'ourGray', color: 'rgba(20, 12, 64, 0.6)' }}
-            >
-              Отправить
-            </Button>
-          </HStack>
+          <CustomButton text="Отправить" type="submit" isDisabled={isSubmitDisabled} />
         </VStack>
       </Box>
     </SectionWrapper>
