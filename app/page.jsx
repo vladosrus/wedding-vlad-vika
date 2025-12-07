@@ -5,6 +5,7 @@ import Countdown from 'components/Countdown';
 import EventPlan from 'components/EventPlan';
 import Greetings from 'components/Greetings';
 import GuestForm from 'components/GuestForm';
+import Invitation from 'components/Invitation';
 import LooksSlider from 'components/LooksSlider';
 import MusicToggle from 'components/MusicToggle';
 import TextGreetings from 'components/TextGreetings';
@@ -24,6 +25,7 @@ export default function Home() {
       <FAQ />
       <BlocksDivider />
       <GuestForm />
+      <Invitation />
 
       <MusicToggle />
     </VStack>
