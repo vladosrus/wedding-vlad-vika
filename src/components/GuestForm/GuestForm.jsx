@@ -91,27 +91,32 @@ const GuestForm = () => {
         as="form"
         onSubmit={handleSubmit}
         w="full"
-        maxW="480px"
-        px={{ mobile: '18px', laptop: '26px' }}
-        py={{ mobile: '24px', laptop: '30px' }}
-        borderRadius="20px"
-        bgGradient="linear-gradient(145deg, #1b1b1f, #18181c)"
-        color="white"
-        boxShadow="0 10px 35px rgba(0,0,0,0.4)"
-        border="1px solid #24242a"
+        maxW="720px"
+        px={{ mobile: '18px', laptop: '32px' }}
+        py={{ mobile: '22px', laptop: '32px' }}
+        borderRadius={{ mobile: '18px', laptop: '24px' }}
+        bg="rgba(20, 12, 64, 0.03)"
+        border="1px solid"
+        borderColor="ourGray"
+        boxShadow="0 20px 40px rgba(20, 12, 64, 0.08)"
       >
-        <VStack align="stretch" gap={{ mobile: '14px', laptop: '18px' }}>
-          <VStack gap="4px">
+        <VStack align="stretch" gap={{ mobile: '16px', laptop: '22px' }}>
+          <VStack gap="6px" textAlign="center">
             <Text
               fontSize={{ mobile: '20px', laptop: '24px' }}
-              letterSpacing="3px"
+              letterSpacing="2px"
               textTransform="uppercase"
+              color="ourBlack"
             >
               Анкета гостя
             </Text>
 
-            <Text fontSize="14px" color="whiteAlpha.700" textAlign="center">
-              Ваши ответы помогут нам подготовить праздник. Будем ждать ответ до 01.11.2025.
+            <Text
+              maxW={{ mobile: '350px', tablet: '400px', laptop: '440px' }}
+              fontSize={{ mobile: '14px', laptop: '16px' }}
+              color="rgba(20, 12, 64, 0.7)"
+            >
+              Ваши ответы помогут нам подготовить праздник. Будем ждать ответ до 01.02.2026
             </Text>
           </VStack>
 
@@ -121,8 +126,8 @@ const GuestForm = () => {
             <Input
               value={formValues.name}
               placeholder="Напишите имя и фамилию"
-              bg="#0f0f12"
-              borderColor={errors.name ? 'ourAccent' : '#2f2f36'}
+              bg="white"
+              borderColor={errors.name ? 'ourAccent' : 'ourGray'}
               _hover={{ borderColor: 'ourAccent' }}
               _focusVisible={{ borderColor: 'ourAccent', boxShadow: '0 0 0 1px #DB7093' }}
               onChange={event => handleChange('name', event.target.value)}
@@ -195,11 +200,12 @@ const GuestForm = () => {
             <Button
               type="submit"
               isDisabled={isSubmitDisabled}
-              bg="white"
-              color="ourBlack"
+              bg="ourAccent"
+              color="white"
               borderRadius="10px"
               px="36px"
-              _hover={{ bg: 'whiteAlpha.900' }}
+              _hover={{ bg: '#c75f82' }}
+              _disabled={{ bg: 'ourGray', color: 'rgba(20, 12, 64, 0.6)' }}
             >
               Отправить
             </Button>
