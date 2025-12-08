@@ -12,36 +12,34 @@ const placeMarkProps = {
   modules: ['geoObject.addon.balloon', 'geoObject.addon.hint'],
 };
 
-const YandexMap = () => {
-  return (
-    <VStack w="full" align="start" gap={{ mobile: '10px', tablet: '12px', laptop: '16px' }}>
-      <HStack w="full" align="flex-start" gap={{ mobile: '16px', tablet: '20px', laptop: '28px' }}>
-        <NextImage
-          src={PurpleStar}
-          alt="Розовая звёздочка"
-          w="auto"
-          h="auto"
-          boxSize={{ mobile: '24px', tablet: '26px', laptop: '28px' }}
-        />
+const YandexMap = () => (
+  <VStack w="full" align="start" gap={{ mobile: '10px', tablet: '12px', laptop: '16px' }}>
+    <HStack w="full" align="flex-start" gap={{ mobile: '16px', tablet: '20px', laptop: '28px' }}>
+      <NextImage
+        src={PurpleStar}
+        alt="Розовая звёздочка"
+        w="auto"
+        h="auto"
+        boxSize={{ mobile: '24px', tablet: '26px', laptop: '28px' }}
+      />
 
-        <VStack w="full" align="start" gap={{ mobile: '10px', tablet: '12px', laptop: '16px' }}>
-          <Text
-            as="h3"
-            fontSize={{ mobile: '20px', tablet: '22px', laptop: '24px' }}
-            lineHeight="130%"
-            fontWeight="700"
-          >
-            Где будут проходить мероприятия?
-          </Text>
-        </VStack>
-      </HStack>
+      <VStack w="full" align="start" gap={{ mobile: '10px', tablet: '12px', laptop: '16px' }}>
+        <Text
+          as="h3"
+          fontSize={{ mobile: '20px', tablet: '22px', laptop: '24px' }}
+          lineHeight="130%"
+          fontWeight="700"
+        >
+          Где будут проходить мероприятия?
+        </Text>
+      </VStack>
+    </HStack>
 
-      <CustomMap mapCenter={[60.04, 30.4]} zoom={10.4} hideBelow="laptop" />
-      <CustomMap mapCenter={[60.04, 30.4]} zoom={10.2} hideBelow="tablet" hideFrom="laptop" />
-      <CustomMap mapCenter={[60.04, 30.4]} zoom={9.1} hideFrom="tablet" />
-    </VStack>
-  );
-};
+    <CustomMap mapCenter={[60.04, 30.4]} zoom={10.4} hideBelow="laptop" />
+    <CustomMap mapCenter={[60.04, 30.4]} zoom={10.2} hideBelow="tablet" hideFrom="laptop" />
+    <CustomMap mapCenter={[60.04, 30.4]} zoom={9.1} hideFrom="tablet" />
+  </VStack>
+);
 
 export default memo(YandexMap);
 
@@ -55,10 +53,11 @@ const CustomMap = ({ mapCenter, zoom, ...props }) => {
         isLoaded={isMapLoaded}
         w="full"
         aspectRatio={{ mobile: '16 / 13', laptop: '16 / 11' }}
-        startColor="bg.gray"
-        endColor="bg.grayLight"
+        startColor="ourAccent"
+        endColor="white"
         borderRadius="18px"
         overflow="hidden"
+        speed={1.1}
         onClick={setIsMapActive.on}
         {...props}
       >
