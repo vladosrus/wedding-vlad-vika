@@ -12,8 +12,9 @@ const TextGreetings = () => (
     >
       <CustomDivider />
 
-      <Text fontSize={{ mobile: '22px', laptop: '32px' }} lineHeight="132%" textAlign="center">
-        {'Дорогие гости, будем очень Вас ждать <3'}
+      <Text fontSize={{ mobile: '18px', laptop: '32px' }} lineHeight="132%" textAlign="center">
+        Мы были бы счастливы разделить с вами этот важный и особенный для нас день — день нашей
+        свадьбы!
       </Text>
 
       <CustomDivider />

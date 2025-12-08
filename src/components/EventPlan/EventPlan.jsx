@@ -45,7 +45,8 @@ const schedule = [
     events: [
       {
         time: '15:00',
-        title: 'Сбор гостей',
+        title:
+          'Сбор гостей (<a href="https://yandex.ru/navi/org/dvorets_brakosochetaniya_1/1311913400?si=jcxh3fr463x5p7u5ekttb5g5tm" target="_blank" title="Посмотрите где это на Яндекс.Картах" style="color: #DB7093;">Токсово, ул. Разъезжая, 11</a>)',
         image: ZagorodnayaPloshchadka,
         description:
           'С 15:00 собираемся на загородной площадке — впереди ещё один тёплый свадебный день.',

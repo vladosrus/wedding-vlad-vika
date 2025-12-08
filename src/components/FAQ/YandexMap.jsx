@@ -73,7 +73,11 @@ const CustomMap = ({ mapCenter, zoom, ...props }) => {
         >
           <PlaceMark
             geometry={[59.933918, 30.293945]}
-            properties={{ balloonContentHeader: 'ЗАГС', hintContent: 'ЗАГС' }}
+            properties={{
+              balloonContentHeader: 'ЗАГС',
+              balloonContentBody: 'Английская набережная, 28',
+              hintContent: 'ЗАГС',
+            }}
             {...placeMarkProps}
           />
 
@@ -81,6 +85,7 @@ const CustomMap = ({ mapCenter, zoom, ...props }) => {
             geometry={[60.136089, 30.524915]}
             properties={{
               balloonContentHeader: 'Выездная церемония',
+              balloonContentBody: 'Всеволожский р-н, пос. Токсово, ул. Разъезжая, д. 11',
               hintContent: 'Выездная церемония',
             }}
             {...placeMarkProps}
