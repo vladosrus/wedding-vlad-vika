@@ -21,7 +21,7 @@ export default function Home() {
       <EventPlan />
       <BlocksDivider />
       <LooksSlider />
-      <BlocksDivider />
+      <BlocksDivider withEasterEgg />
       <FAQ />
       <BlocksDivider />
       <GuestForm />

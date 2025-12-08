@@ -1,18 +1,18 @@
 import { memo } from 'react';
-import { Box, HStack, Text, VStack } from '@chakra-ui/react';
+import { HStack, Text, VStack } from '@chakra-ui/react';
 
+import CustomButton from 'components/CustomButton';
 import NextImage from 'components/NextImage';
 
 import PurpleStar from 'assets/icons/purpleStar.svg';
 
-const FaqItem = ({ question, answer, index }) => (
-  <Box
-    _notLast={
-      index === 0 && {
-        borderBottom: '1px solid rgba(20, 12, 64, 0.12)',
-        pb: { mobile: '12px', tablet: '16px', laptop: '16px' },
-      }
-    }
+const FaqItem = ({ question, answer, isBtnVisible = false }) => (
+  <VStack
+    w="full"
+    align="stretch"
+    gap={{ mobile: '10px', tablet: '13px', laptop: '16px' }}
+    borderBottom="1px solid rgba(20, 12, 64, 0.12)"
+    pb={{ mobile: '12px', tablet: '16px', laptop: '16px' }}
   >
     <HStack align="flex-start" gap={{ mobile: '16px', tablet: '20px', laptop: '28px' }}>
       <NextImage
@@ -38,7 +38,15 @@ const FaqItem = ({ question, answer, index }) => (
         </Text>
       </VStack>
     </HStack>
-  </Box>
+
+    {isBtnVisible && (
+      <CustomButton
+        text="Подарить цветы"
+        link="https://ryabinaflowers.ru/svadebniy_tsvetochniy_depozit"
+        maxW="unset"
+      />
+    )}
+  </VStack>
 );
 
 export default memo(FaqItem);

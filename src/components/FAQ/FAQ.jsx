@@ -2,7 +2,6 @@
 import { Text, VStack } from '@chakra-ui/react';
 
 import SectionWrapper from 'components/SectionWrapper';
-import CustomButton from 'components/CustomButton';
 import YandexMap from './YandexMap';
 import FaqItem from './FaqItem';
 
@@ -16,6 +15,7 @@ const faqItemsData = [
     question: 'Дарить ли цветы?',
     answer:
       'Лучшие цветы на свадьбу — это подписка, которая будет радовать нас целый год! Перейдите по ссылке и Вы попадете на страницу с подробной инструкцией.',
+    isBtnVisible: true,
   },
 ];
 
@@ -36,16 +36,9 @@ const FAQ = () => (
         borderColor="ourGray"
         gap={{ mobile: '20px', tablet: '26px', laptop: '32px' }}
       >
-        {faqItemsData.map((faqItemData, index) => (
-          <FaqItem key={faqItemData.question} index={index} {...faqItemData} />
+        {faqItemsData.map(faqItemData => (
+          <FaqItem key={faqItemData.question} {...faqItemData} />
         ))}
-
-        <CustomButton
-          text="Подарить цветы"
-          link="https://ryabinaflowers.ru/svadebniy_tsvetochniy_depozit"
-          mt={{ mobile: '-10px', tablet: '-13px', laptop: '-16px' }}
-          maxW="unset"
-        />
 
         <YandexMap />
       </VStack>
