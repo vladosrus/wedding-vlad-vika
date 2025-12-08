@@ -1,6 +1,6 @@
 'use client';
-import Link from 'next/link';
-import { Button, Text, VStack } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { Button, Link, Text, VStack } from '@chakra-ui/react';
 
 import Form from './Form';
 
@@ -32,7 +32,19 @@ export default function EasterEgg() {
           fontWeight="700"
           lineHeight="120%"
         >
-          Привет! Я Влад 👋 <br />
+          Привет! Я{' '}
+          <Link
+            as={NextLink}
+            href="https://t.me/vladislav_chikov"
+            target="_blank"
+            rel="noreferrer"
+            color="purple.400"
+            textDecoration="underline"
+            textUnderlineOffset="0.25em"
+          >
+            Влад
+          </Link>{' '}
+          👋 <br />
           Создатель этого сайта 👨‍💻
         </Text>
 
