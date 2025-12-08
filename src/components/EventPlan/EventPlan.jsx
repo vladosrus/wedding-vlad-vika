@@ -46,7 +46,7 @@ const schedule = [
       {
         time: '15:00',
         title:
-          'Сбор гостей (<a href="https://yandex.ru/maps/-/CLgPnNlk" target="_blank" title="Посмотрите где это на Яндекс.Картах" style="color: #DB7093;">Токсово, ул. Разъезжая, 11</a>)',
+          'Сбор гостей (<a href="https://yandex.ru/maps/-/CLsAUSKm" target="_blank" title="Посмотрите где это на Яндекс.Картах" style="color: #DB7093;">Токсово, ул. Разъезжая, 15</a>)',
         image: ZagorodnayaPloshchadka,
         description:
           'С 15:00 собираемся на загородной площадке — впереди ещё один тёплый свадебный день.',
